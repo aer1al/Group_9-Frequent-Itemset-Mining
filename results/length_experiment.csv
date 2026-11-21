@@ -1,0 +1,6 @@
+avg_transaction_length,backend,minsup,seconds,peak_python_mb,itemset_count,status,error
+3,bitset,0.04,0.009214,0.3031,52,ok,
+5,bitset,0.04,0.016079,0.5977,60,ok,
+7,bitset,0.04,0.018429,0.6596,60,ok,
+9,bitset,0.04,0.0166,0.9349,63,ok,
+11,bitset,0.04,0.019488,0.9586,285,ok,

@@ -1,0 +1,5 @@
+# Algorithm itself only uses Python standard library.
+# Allowed numeric dependency for image Bag-of-Visual-Words:
+numpy>=1.23
+# The following is needed only for local automated tests (not the algorithm):
+pytest>=7.0

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 490">
+<rect width="850" height="490" fill="#ffffff"/>
+<text x="20" y="26" font-size="17" font-family="Arial" font-weight="bold">c20d10k: Python peak allocations</text>
+<path d="M 83,53 V 420 H 792" stroke="#666" fill="none"/>
+<line x1="83" y1="420.00" x2="792" y2="420.00" stroke="#e6e6e6"/>
+<text x="74" y="425.00" text-anchor="end" font-size="11">0</text>
+<line x1="83" y1="328.25" x2="792" y2="328.25" stroke="#e6e6e6"/>
+<text x="74" y="333.25" text-anchor="end" font-size="11">16</text>
+<line x1="83" y1="236.50" x2="792" y2="236.50" stroke="#e6e6e6"/>
+<text x="74" y="241.50" text-anchor="end" font-size="11">32</text>
+<line x1="83" y1="144.75" x2="792" y2="144.75" stroke="#e6e6e6"/>
+<text x="74" y="149.75" text-anchor="end" font-size="11">48</text>
+<line x1="83" y1="53.00" x2="792" y2="53.00" stroke="#e6e6e6"/>
+<text x="74" y="58.00" text-anchor="end" font-size="11">64</text>
+<polyline points="83.00,92.32 187.26,93.97 322.81,101.00 479.21,149.94 635.60,187.36 792.00,227.55" fill="none" stroke="#3c6796" stroke-width="2.7"/>
+<circle cx="83.00" cy="92.32" r="3.7" fill="#3c6796"/>
+<circle cx="187.26" cy="93.97" r="3.7" fill="#3c6796"/>
+<circle cx="322.81" cy="101.00" r="3.7" fill="#3c6796"/>
+<circle cx="479.21" cy="149.94" r="3.7" fill="#3c6796"/>
+<circle cx="635.60" cy="187.36" r="3.7" fill="#3c6796"/>
+<circle cx="792.00" cy="227.55" r="3.7" fill="#3c6796"/>
+<polyline points="83.00,227.37 187.26,229.11 322.81,229.86 479.21,230.53 635.60,230.95 792.00,231.11" fill="none" stroke="#c2643b" stroke-width="2.7"/>
+<circle cx="83.00" cy="227.37" r="3.7" fill="#c2643b"/>
+<circle cx="187.26" cy="229.11" r="3.7" fill="#c2643b"/>
+<circle cx="322.81" cy="229.86" r="3.7" fill="#c2643b"/>
+<circle cx="479.21" cy="230.53" r="3.7" fill="#c2643b"/>
+<circle cx="635.60" cy="230.95" r="3.7" fill="#c2643b"/>
+<circle cx="792.00" cy="231.11" r="3.7" fill="#c2643b"/>
+<line x1="83" y1="460" x2="113" y2="460" stroke="#3c6796" stroke-width="3"/>
+<text x="119" y="465" font-family="Arial" font-size="12">set</text>
+<line x1="283" y1="460" x2="313" y2="460" stroke="#c2643b" stroke-width="3"/>
+<text x="319" y="465" font-family="Arial" font-size="12">bitset</text>
+<text x="83" y="450" font-size="11">32 - 100 (minsup %)</text>
+<text x="19" y="44" font-size="11">Peak MiB</text>
+</svg>

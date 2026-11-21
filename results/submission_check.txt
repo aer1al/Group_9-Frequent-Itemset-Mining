@@ -1,0 +1,13 @@
+PASS | 4 official benchmarks x at least 6 valid minsup points
+PASS | 4 official raw dataset files present
+PASS | SPMF matches EVERY support + itemset on 4x6 comparisons + 1 toy
+PASS | True isolated peak process RSS for 4 datasets x 2 backends
+PASS | 5 real scalability measures
+PASS | 5 transaction-length measures
+PASS | Top-10 ECommerce association rules
+PASS | Real UCI visual patterns output
+PASS | Provenance SHA256 manifest exists
+PASS | Real GitHub public repository URL filled
+PASS | Real public Colab URL filled
+PASS | Student identity completed in Report.tex
+PASS | Report.pdf exists; PDF page count must be inspected

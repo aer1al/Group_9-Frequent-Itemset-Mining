@@ -1,0 +1,9 @@
+dataset,min_count,backend,seconds,peak_rss_mib,patterns,status
+foodmart,14,set,0.040384,27.4531,460,ok
+foodmart,14,bitset,0.032568,27.5547,460,ok
+c20d10k,5500,set,0.311575,85.2305,1327,ok
+c20d10k,5500,bitset,0.074245,62.8398,1327,ok
+t25i10d10k,967,set,0.089698,65.8867,23,ok
+t25i10d10k,967,bitset,0.086939,66.1094,23,ok
+BMS_WebView_1,2012,set,0.066719,62.5898,8,ok
+BMS_WebView_1,2012,bitset,0.084474,62.8359,8,ok

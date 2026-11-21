@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 490">
+<rect width="850" height="490" fill="#ffffff"/>
+<text x="20" y="26" font-size="17" font-family="Arial" font-weight="bold">c20d10k: time vs min support</text>
+<path d="M 83,53 V 420 H 792" stroke="#666" fill="none"/>
+<line x1="83" y1="420.00" x2="792" y2="420.00" stroke="#e6e6e6"/>
+<text x="74" y="425.00" text-anchor="end" font-size="11">0</text>
+<line x1="83" y1="328.25" x2="792" y2="328.25" stroke="#e6e6e6"/>
+<text x="74" y="333.25" text-anchor="end" font-size="11">0.284</text>
+<line x1="83" y1="236.50" x2="792" y2="236.50" stroke="#e6e6e6"/>
+<text x="74" y="241.50" text-anchor="end" font-size="11">0.568</text>
+<line x1="83" y1="144.75" x2="792" y2="144.75" stroke="#e6e6e6"/>
+<text x="74" y="149.75" text-anchor="end" font-size="11">0.852</text>
+<line x1="83" y1="53.00" x2="792" y2="53.00" stroke="#e6e6e6"/>
+<text x="74" y="58.00" text-anchor="end" font-size="11">1.14</text>
+<polyline points="83.00,198.74 187.26,249.59 322.81,291.87 479.21,355.48 635.60,384.15 792.00,388.71" fill="none" stroke="#3c6796" stroke-width="2.7"/>
+<circle cx="83.00" cy="198.74" r="3.7" fill="#3c6796"/>
+<circle cx="187.26" cy="249.59" r="3.7" fill="#3c6796"/>
+<circle cx="322.81" cy="291.87" r="3.7" fill="#3c6796"/>
+<circle cx="479.21" cy="355.48" r="3.7" fill="#3c6796"/>
+<circle cx="635.60" cy="384.15" r="3.7" fill="#3c6796"/>
+<circle cx="792.00" cy="388.71" r="3.7" fill="#3c6796"/>
+<polyline points="83.00,322.07 187.26,337.69 322.81,342.23 479.21,342.22 635.60,360.48 792.00,378.28" fill="none" stroke="#c2643b" stroke-width="2.7"/>
+<circle cx="83.00" cy="322.07" r="3.7" fill="#c2643b"/>
+<circle cx="187.26" cy="337.69" r="3.7" fill="#c2643b"/>
+<circle cx="322.81" cy="342.23" r="3.7" fill="#c2643b"/>
+<circle cx="479.21" cy="342.22" r="3.7" fill="#c2643b"/>
+<circle cx="635.60" cy="360.48" r="3.7" fill="#c2643b"/>
+<circle cx="792.00" cy="378.28" r="3.7" fill="#c2643b"/>
+<polyline points="83.00,92.32 187.26,160.16 322.81,201.94 479.21,244.69 635.60,181.19 792.00,280.12" fill="none" stroke="#577e53" stroke-width="2.7"/>
+<circle cx="83.00" cy="92.32" r="3.7" fill="#577e53"/>
+<circle cx="187.26" cy="160.16" r="3.7" fill="#577e53"/>
+<circle cx="322.81" cy="201.94" r="3.7" fill="#577e53"/>
+<circle cx="479.21" cy="244.69" r="3.7" fill="#577e53"/>
+<circle cx="635.60" cy="181.19" r="3.7" fill="#577e53"/>
+<circle cx="792.00" cy="280.12" r="3.7" fill="#577e53"/>
+<line x1="83" y1="460" x2="113" y2="460" stroke="#3c6796" stroke-width="3"/>
+<text x="119" y="465" font-family="Arial" font-size="12">set</text>
+<line x1="283" y1="460" x2="313" y2="460" stroke="#c2643b" stroke-width="3"/>
+<text x="319" y="465" font-family="Arial" font-size="12">bitset</text>
+<line x1="483" y1="460" x2="513" y2="460" stroke="#577e53" stroke-width="3"/>
+<text x="519" y="465" font-family="Arial" font-size="12">SPMF</text>
+<text x="83" y="450" font-size="11">32 - 100 (minsup %)</text>
+<text x="19" y="44" font-size="11">Runtime seconds</text>
+</svg>

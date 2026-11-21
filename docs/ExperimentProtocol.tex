@@ -1,0 +1,55 @@
+% Name: Thiều Quang
+% ID: 24127114
+% Member: Tôn Thất Việt Khoa
+% ID: 24127190
+% Course: Khai thác dữ liệu và ứng dụng (Data Mining and Applications)
+% Assignment: https://hcmus-cs-ta.github.io/lab-book/data-mining/projects/itemset/
+
+\section{Giao thức thực nghiệm và trạng thái kết quả}
+
+Các phép đo được thực hiện trên dữ liệu nguồn có URL và SHA-256 ghi trong \myitem{data/download\_manifest.json}. Thống kê đầu vào được tính từ các tệp cục bộ và lưu tại \myitem{results/dataset\_statistics.csv}. Bảng~\ref{tab:datasetobserved} tóm tắt số giao dịch, số item phân biệt và chiều dài giao dịch trung bình được parser ghi nhận.
+
+\begin{table}[t]
+\centering\caption{Thống kê parser trên các tệp dữ liệu benchmark đã tải}\label{tab:datasetobserved}
+\begin{tabular}{@{}lrrr@{}}\toprule
+Bộ dữ liệu & Giao dịch & Item phân biệt & Độ dài TB\\\midrule
+Foodmart & 4,141 & 1,559 & 4.4238\\
+c20d10k & 10,000 & 192 & 20.0000\\
+t25i10d10k & 9,976 & 929 & 24.7743\\
+BMS\_WebView\_1 & 59,602 & 497 & 2.5106\\\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Benchmark và đối chiếu tham chiếu}
+Mỗi bộ dữ liệu được chạy với hai backend \myitem{set} và \myitem{bitset}, qua sáu ngưỡng support tuyệt đối được xác định từ tần suất singleton lớn nhất của chính dữ liệu. Tỷ lệ dùng để chọn ngưỡng là 100\%, 85\%, 70\%, 55\%, 42\% và 32\%; giá trị support tuyệt đối được lưu trong CSV. Cả 48 lượt chạy của hai backend hiện có trạng thái \myitem{ok}.
+
+Đầu ra Eclat được đối chiếu theo từng cặp itemset--support với SPMF chạy độc lập. Cả 24/24 cấu hình benchmark đạt exact match bằng 1.0 và dữ liệu toy cũng khớp. Riêng BMS\_WebView\_1 có 497 item nhưng mã item lớn nhất là 60977. Khi chạy SPMF, các mã được ánh xạ tạm về miền 1 đến 497 để tránh lỗi Java heap space. Kết quả được đổi ngược về mã ban đầu trước khi so sánh. Bộ dữ liệu gốc không bị sửa đổi.
+Bảng kết quả trong phần \myitem{generated/experiment\_data.tex} được sinh từ CSV. Thời gian của SPMF bao gồm thời gian khởi động JVM. Các số liệu thời gian vì vậy cần được diễn giải cùng giới hạn này; chúng không phải phép đo thời gian thuần của lõi thuật toán.
+
+\subsection{Thời gian và bộ nhớ}
+Thời gian chạy được đo bằng đồng hồ đơn điệu của Python. \myitem{peak\_python\_mb} là lượng cấp phát Python do \myitem{tracemalloc} theo dõi, không tương đương bộ nhớ cư trú toàn tiến trình. \myitem{peak\_rss\_mib} được ghi riêng trong tiến trình đo RSS. Tệp \myitem{results/rss\_memory.csv} hiện có tám dòng với trạng thái \myitem{ok}; phạm vi này không thay thế thống kê RSS cho mọi bộ dữ liệu và mọi ngưỡng.
+
+\subsection{Scalability và chiều dài giao dịch}
+Thí nghiệm scalability dùng các mức 10\%, 25\%, 50\%, 75\% và 100\% giao dịch của BMS\_WebView\_1. Tệp \myitem{results/scalability.csv} có năm dòng trạng thái \myitem{ok}. Thí nghiệm độ dài giao dịch dùng các mức trung bình 3, 5, 7, 9 và 11; \myitem{results/length\_experiment.csv} cũng có năm dòng trạng thái \myitem{ok}. Các biểu đồ được xuất từ CSV và một tập biểu đồ minh họa đã được đưa vào bản PDF này.
+
+\subsection{Hai ứng dụng}
+Tệp \myitem{results/market\_top10.csv} hiện có mười luật kết hợp được xếp theo lift. Tệp \myitem{results/visual\_patterns.csv} có 37 mẫu visual-word từ tập con 600 ảnh Optdigits theo cấu hình của ứng dụng. Các bảng tương ứng được đưa vào phần kết quả sinh tự động; các giới hạn diễn giải được thảo luận tại hai mục ứng dụng.
+
+\subsection{Tổng hợp mức độ kiểm chứng}
+\begin{table}[t]
+\centering
+\caption{Tình trạng các hạng mục thực nghiệm đã xác nhận}\label{tab:accept}
+\begin{tabular}{@{}p{.56\columnwidth}p{.31\columnwidth}@{}}\toprule
+Hạng mục & Kết quả \\ \midrule
+Benchmark Python (4 bộ, 6 ngưỡng, 2 backend) & 48/48 thành công\\
+Benchmark Julia (4 bộ, 6 ngưỡng, 2 backend) & 48/48 đạt\\
+Kiểm thử Julia (chức năng và brute force) & 77/77 đạt\\
+Python--SPMF trên Colab (gồm toy) & 25/25 khớp\\
+Julia--SPMF trên Windows (benchmark) & 24/24 khớp\\
+RSS, scalability, độ dài giao dịch & Có dữ liệu CSV\\
+Hai ứng dụng thực tế & 10 luật; 37 mẫu\\
+Biểu đồ và báo cáo IEEE & Đã đưa vào PDF\\
+\bottomrule\end{tabular}
+\end{table}
+
+Các kết quả đối chiếu sử dụng dữ liệu nguồn với SHA-256 được lưu trong manifest. Riêng BMS\_WebView\_1, việc ánh xạ tạm 497 ID liên tiếp chỉ phục vụ chạy SPMF; các tập mục được quy đổi về mã gốc trước khi đối chiếu. Trên Colab, SPMF đã được chạy bằng phiên bản Java phù hợp để khắc phục lỗi tương thích JAR. Kết quả đo trên Windows và Colab được xem là hai môi trường khác nhau, không gộp thời gian thành một phép so sánh kiểm soát đồng nhất.

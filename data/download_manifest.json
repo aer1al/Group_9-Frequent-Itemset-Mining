@@ -1,0 +1,65 @@
+{
+  "foodmart": {
+    "source_url": "https://www.philippe-fournier-viger.com/spmf/publicdatasets/foodmartFIM.txt",
+    "acquisition_method": "direct_download",
+    "description": "SPMF public FIM dataset, real retail",
+    "local_path": "data/benchmark/foodmart.txt",
+    "size_bytes": 82840,
+    "sha256": "8762f2000459e94ee166bd813763567b2b60dfb24970e1cffec497b23a694081",
+    "recorded_utc": "2026-10-27T14:24:02.461423+00:00"
+  },
+  "c20d10k": {
+    "source_url": "https://www.philippe-fournier-viger.com/spmf/publicdatasets/c20d10k.txt",
+    "acquisition_method": "direct_download",
+    "description": "SPMF synthetic FIM dataset",
+    "local_path": "data/benchmark/c20d10k.txt",
+    "size_bytes": 800000,
+    "sha256": "1ec8dca5aedaad57239481b726f67bf11cd8f51532aad0a2b6cffc47ddcf9394",
+    "recorded_utc": "2026-10-27T14:24:26.185975+00:00"
+  },
+  "t25i10d10k": {
+    "source_url": "https://www.philippe-fournier-viger.com/spmf/publicdatasets/t25i10d10k.txt",
+    "acquisition_method": "direct_download",
+    "description": "SPMF synthetic FIM dataset",
+    "local_path": "data/benchmark/t25i10d10k.txt",
+    "size_bytes": 970868,
+    "sha256": "bada34032cae267782302bcc2225e8813ef4a8329d659453cb732b036b170f2e",
+    "recorded_utc": "2026-10-27T14:24:29.986952+00:00"
+  },
+  "BMS_WebView_1": {
+    "source_url": "https://www.philippe-fournier-viger.com/spmf/publicdatasets/BMS1_itemset_mining.txt",
+    "acquisition_method": "direct_download",
+    "description": "SPMF web clickstream FIM dataset, originally FIMI",
+    "local_path": "data/benchmark/BMS_WebView_1.txt",
+    "size_bytes": 957436,
+    "sha256": "0c3b7eb77e76f94b69121d9967d896ac6ab09c369683f445bfb16869be66bfd3",
+    "recorded_utc": "2026-10-27T14:24:36.653134+00:00"
+  },
+  "ecommerce": {
+    "source_url": "https://www.philippe-fournier-viger.com/spmf/publicdatasets/ecommerce_time_without_utility.txt",
+    "acquisition_method": "direct_download",
+    "description": "SPMF real ecommerce records with timestamp suffix",
+    "local_path": "data/applications/ecommerce_timestamped.txt",
+    "size_bytes": 1242253,
+    "sha256": "fcf08e588d430d62021f35b0edbf90853a3d04359e1898cb0858fef7be541897",
+    "recorded_utc": "2026-10-27T14:25:00.997717+00:00"
+  },
+  "ecommerce_names": {
+    "source_url": "https://www.philippe-fournier-viger.com/spmf/publicdatasets/online_retail_item_names.txt",
+    "acquisition_method": "direct_download",
+    "description": "SPMF item id -> original product descriptions",
+    "local_path": "data/applications/online_retail_item_names.txt",
+    "size_bytes": 161037,
+    "sha256": "7d52faaabef94940b4be18e405328bae2c91aa0b25c53403f38b36f7dcd4890f",
+    "recorded_utc": "2026-10-27T14:25:02.913709+00:00"
+  },
+  "optdigits": {
+    "source_url": "https://archive.ics.uci.edu/ml/machine-learning-databases/optdigits/optdigits.tra",
+    "acquisition_method": "direct_download",
+    "description": "UCI Optical Recognition of Handwritten Digits, training split",
+    "local_path": "data/applications/optdigits.tra",
+    "size_bytes": 563639,
+    "sha256": "e1b683cc211604fe8fd8c4417e6a69f31380e0c61d4af22e93cc21e9257ffedd",
+    "recorded_utc": "2026-10-27T14:25:43.663540+00:00"
+  }
+}

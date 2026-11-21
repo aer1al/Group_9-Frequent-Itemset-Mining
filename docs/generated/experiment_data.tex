@@ -1,0 +1,84 @@
+% Auto-generated from actual CSV results. Do not edit hand-written numbers here.
+\section{Kết quả đo đã ghi nhận và đối chiếu}
+Mọi giá trị trong các bảng tiếp theo chỉ được lấy từ tệp CSV do chương trình chạy trên máy tạo ra; dấu gạch ngang biểu thị thiếu dữ liệu. Phép đo SPMF bao gồm thời gian khởi động JVM. Peak Python MiB chỉ phản ánh phân bổ Python đo bằng tracemalloc.
+\begin{table}[!htbp]
+\centering\scriptsize
+\caption{Kết quả đo thực của foodmart theo support tuyệt đối.}
+\begin{tabular}{@{}rrrrrr@{}}\toprule
+$k$ & \#FI & Set(s) & Bit(s) & SPMF(s) & Khớp \\ \midrule
+25 & 1 & 0.0261 & 0.0249 & 0.7166 & CÓ \\
+21 & 12 & 0.0247 & 0.0261 & 0.3424 & CÓ \\
+18 & 79 & 0.0274 & 0.0321 & 0.3252 & CÓ \\
+14 & 460 & 0.1093 & 0.1170 & 0.3372 & CÓ \\
+10 & 1165 & 0.7610 & 0.8770 & 0.4368 & CÓ \\
+8 & 1400 & 1.0219 & 0.8921 & 0.3801 & CÓ \\
+\bottomrule\end{tabular}
+\end{table}
+\begin{table}[!htbp]
+\centering\scriptsize
+\caption{Kết quả đo thực của c20d10k theo support tuyệt đối.}
+\begin{tabular}{@{}rrrrrr@{}}\toprule
+$k$ & \#FI & Set(s) & Bit(s) & SPMF(s) & Khớp \\ \midrule
+10000 & 3 & 0.0969 & 0.1292 & 0.4332 & CÓ \\
+8500 & 63 & 0.1110 & 0.1843 & 0.7395 & CÓ \\
+7000 & 447 & 0.1998 & 0.2409 & 0.5429 & CÓ \\
+5500 & 1327 & 0.3968 & 0.2408 & 0.6753 & CÓ \\
+4200 & 2079 & 0.5277 & 0.2549 & 0.8047 & CÓ \\
+3200 & 3999 & 0.6852 & 0.3033 & 1.0147 & CÓ \\
+\bottomrule\end{tabular}
+\end{table}
+\begin{table}[!htbp]
+\centering\scriptsize
+\caption{Kết quả đo thực của t25i10d10k theo support tuyệt đối.}
+\begin{tabular}{@{}rrrrrr@{}}\toprule
+$k$ & \#FI & Set(s) & Bit(s) & SPMF(s) & Khớp \\ \midrule
+1758 & 1 & 0.1296 & 0.1472 & 0.5350 & CÓ \\
+1494 & 3 & 0.1249 & 0.1265 & 0.5271 & CÓ \\
+1231 & 10 & 0.1172 & 0.1410 & 0.4799 & CÓ \\
+967 & 23 & 0.1320 & 0.1893 & 0.5572 & CÓ \\
+738 & 48 & 0.1789 & 0.2048 & 0.4487 & CÓ \\
+563 & 109 & 0.2602 & 0.3078 & 0.4961 & CÓ \\
+\bottomrule\end{tabular}
+\end{table}
+\begin{table}[!htbp]
+\centering\scriptsize
+\caption{Kết quả đo thực của BMS\_WebView\_1 theo support tuyệt đối.}
+\begin{tabular}{@{}rrrrrr@{}}\toprule
+$k$ & \#FI & Set(s) & Bit(s) & SPMF(s) & Khớp \\ \midrule
+3658 & 1 & 0.2551 & 0.2513 & 0.4707 & CÓ \\
+3109 & 4 & 0.2407 & 0.2801 & 0.6343 & CÓ \\
+2561 & 5 & 0.2452 & 0.2870 & 0.4588 & CÓ \\
+2012 & 8 & 0.2460 & 0.2882 & 0.4810 & CÓ \\
+1536 & 13 & 0.2469 & 0.3055 & 0.4567 & CÓ \\
+1171 & 23 & 0.2553 & 0.3841 & 0.5110 & CÓ \\
+\bottomrule\end{tabular}
+\end{table}
+\begin{table*}[!tp]
+\centering\scriptsize
+\caption{Top-10 luật kết hợp từ dữ liệu ECommerce thực, xếp theo lift.}
+\begin{tabular}{@{}p{.32\textwidth}p{.32\textwidth}rrr@{}}\toprule
+Vế trái $X$ & Vế phải $Y$ & Support & Confidence & Lift \\ \midrule
+DOLLY GIRL LUNCH BOX & SPACEBOY LUNCH BOX & 0.0121 & 0.7016 & 33.8894 \\
+SPACEBOY LUNCH BOX & DOLLY GIRL LUNCH BOX & 0.0121 & 0.5839 & 33.8894 \\
+PINK REGENCY TEACUP AND SAUCER & GREEN REGENCY TEACUP AND SAUCER + ROSES REGENCY TEACUP AND SAUCER & 0.0145 & 0.6596 & 32.8144 \\
+GREEN REGENCY TEACUP AND SAUCER + ROSES REGENCY TEACUP AND SAUCER & PINK REGENCY TEACUP AND SAUCER & 0.0145 & 0.7209 & 32.8144 \\
+GREEN REGENCY TEACUP AND SAUCER & PINK REGENCY TEACUP AND SAUCER + ROSES REGENCY TEACUP AND SAUCER & 0.0145 & 0.5293 & 32.6164 \\
+PINK REGENCY TEACUP AND SAUCER + ROSES REGENCY TEACUP AND SAUCER & GREEN REGENCY TEACUP AND SAUCER & 0.0145 & 0.8930 & 32.6164 \\
+GARDENERS KNEELING PAD CUP OF TEA & GARDENERS KNEELING PAD KEEP CALM & 0.0106 & 0.6597 & 30.8743 \\
+GARDENERS KNEELING PAD KEEP CALM & GARDENERS KNEELING PAD CUP OF TEA & 0.0106 & 0.4969 & 30.8743 \\
+PINK REGENCY TEACUP AND SAUCER & GREEN REGENCY TEACUP AND SAUCER & 0.0176 & 0.8024 & 29.3083 \\
+GREEN REGENCY TEACUP AND SAUCER & PINK REGENCY TEACUP AND SAUCER & 0.0176 & 0.6439 & 29.3083 \\
+\bottomrule\end{tabular}
+\end{table*}
+\begin{table}[!htbp]
+\centering\scriptsize
+\caption{Năm mẫu visual words phổ biến nhất trên ảnh UCI Optdigits.}
+\begin{tabular}{@{}lrr@{}}\toprule
+Visual-word itemset & Support & Tỉ lệ \\ \midrule
+9 & 600 & 1.0000 \\
+6 9 & 448 & 0.7467 \\
+6 & 448 & 0.7467 \\
+0 9 & 404 & 0.6733 \\
+0 & 404 & 0.6733 \\
+\bottomrule\end{tabular}
+\end{table}
