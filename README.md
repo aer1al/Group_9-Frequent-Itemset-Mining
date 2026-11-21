@@ -144,7 +144,7 @@ julia --startup-file=no .\julia\test_eclat.jl
 Nếu cần tái tạo đầy đủ, dùng các lệnh benchmark, ứng dụng và `scripts.run_spmf_fixed` ở các mục trên. Công cụ SPMF chạy Java độc lập; thời gian SPMF có gồm khởi động JVM. Không kết luận hiệu năng giữa các ngôn ngữ nếu môi trường và cách đo chưa đồng nhất.
 
 ## 8. Nộp Moodle qua GitHub (thực hiện từ VS Code)
- k
+ 
 **Đề HCMUS yêu cầu nộp MỘT link GitHub repo public lên Moodle** .Sau khi đọc hiểu mã nguồn, hoàn thiện thực nghiệm và cập nhật báo cáo:
 
 ```powershell
@@ -159,5 +159,9 @@ git push -u origin main
 **Liêm chính học thuật:** công cụ AI đã hỗ trợ một phần việc chuẩn bị mã và tài liệu. Sinh viên cần tự rà soát, hiểu, kiểm chứng và khai báo theo quy định học phần. Không trình bày công việc chưa thực hiện hoặc kết quả tham chiếu SPMF như sản phẩm do cài đặt của dự án tạo ra.
 
 ## 9. Chạy notebook trên Google Colab
-
-Xem [COLAB_GUIDE.md](COLAB_GUIDE.md) để biết cách tải notebook, cung cấp mã nguồn và lưu kết quả thực nghiệm.
+1. Mở [Google Colab](https://colab.research.google.com/), đăng nhập và chọn *File → Upload notebook*.
+2. Tải lên Eclat_Experiments.ipynb và kết nối runtime Python.
+3. Chạy ô khởi tạo đầu tiên. Nếu được yêu cầu chọn tệp, tải lên gói ZIP đầy đủ của dự án.
+4. Chạy các ô tiếp theo theo thứ tự. Kiểm tra thông báo lỗi và trạng thái của mỗi bước trước khi tiếp tục.
+5. Nếu tải SPMF tự động không thành công, lấy JAR từ [trang tải SPMF chính thức](https://www.philippe-fournier-viger.com/spmf/index.php?link=download.php) và dùng ô tải tệp dự phòng.
+6. Chạy ô cuối để tạo gói kết quả. Tải gói về máy và lưu đúng cấu trúc thư mục trước khi cập nhật báo cáo.
