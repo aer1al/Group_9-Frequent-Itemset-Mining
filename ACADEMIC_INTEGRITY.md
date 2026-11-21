@@ -1,5 +1,4 @@
-**Name:** Thiều Quang  
-**ID:** 24127114
+**Name:** Thiều Quang   **ID:** 24127114
 **Thành viên:** Tôn Thất Việt Khoa — 24127190  
 **Môn học:** Khai thác dữ liệu và ứng dụng (*Data Mining and Applications*)  
 **Đề bài:** [HCMUS — Khai thác tập mục phổ biến](https://hcmus-cs-ta.github.io/lab-book/data-mining/projects/itemset/)
