@@ -6,7 +6,7 @@
 
 # Biên dịch và hoàn thiện báo cáo
 
-Báo cáo được viết bằng tiếng Việt theo định dạng IEEE conference. Đề bài yêu cầu nội dung chính dài 10–15 trang, không tính tài liệu tham khảo và phụ lục. Nguồn LaTeX là `docs/Report.tex`; bảng thực nghiệm được tạo từ các CSV bởi lệnh:
+Báo cáo được viết bằng tiếng Việt theo định dạng IEEE conference. Đề bài yêu cầu nội dung chính dài 10–15 trang. Nguồn LaTeX là `docs/Report.tex`; bảng thực nghiệm được tạo từ các CSV bởi lệnh:
 
 ```powershell
 python -m scripts.generate_report_tables
