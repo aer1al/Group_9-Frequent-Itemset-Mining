@@ -2,7 +2,7 @@
 
 **Thành viên:** Tôn Thất Việt Khoa — 24127190  
 **Môn học:** Khai thác dữ liệu và ứng dụng (*Data Mining and Applications*)  
-**Đề bài:** [HCMUS — Khai thác tập mục phổ biến](https://hcmus-cs-ta.github.io/lab-book/data-mining/projects/itemset/)
+**Đồ án 1 :** [HCMUS — Khai thác tập mục phổ biến](https://hcmus-cs-ta.github.io/lab-book/data-mining/projects/itemset/)
 
 
 # Đồ án Frequent Itemset Mining — Eclat (Python + Julia, VS Code + Colab)
