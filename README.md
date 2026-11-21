@@ -1,9 +1,9 @@
 **Thành viên:** Thiều Quang - 24127114
+
 **Thành viên:** Tôn Thất Việt Khoa — 24127190  
 **Môn học:** Khai thác dữ liệu và ứng dụng (*Data Mining and Applications*)  
 **Đề bài:** [HCMUS — Khai thác tập mục phổ biến](https://hcmus-cs-ta.github.io/lab-book/data-mining/projects/itemset/)
 
-> **Hướng dẫn bắt đầu:** README này là hướng dẫn chính cho cài đặt và chạy dự án. Notebook chính là [notebooks/Project2.ipynb](notebooks/Project2.ipynb); bản sao để tải lên Colab là [Eclat_Experiments.ipynb](Eclat_Experiments.ipynb). Xem thêm [hướng dẫn Colab](COLAB_GUIDE.md) và [trạng thái dự án](PROJECT_STATUS.md); khi notebook yêu cầu, tải lên gói ZIP đầy đủ của dự án.
 
 # Đồ án Frequent Itemset Mining — Eclat (Python + Julia, VS Code + Colab)
 
@@ -144,8 +144,8 @@ julia --startup-file=no .\julia\test_eclat.jl
 Nếu cần tái tạo đầy đủ, dùng các lệnh benchmark, ứng dụng và `scripts.run_spmf_fixed` ở các mục trên. Công cụ SPMF chạy Java độc lập; thời gian SPMF có gồm khởi động JVM. Không kết luận hiệu năng giữa các ngôn ngữ nếu môi trường và cách đo chưa đồng nhất.
 
 ## 8. Nộp Moodle qua GitHub (thực hiện từ VS Code)
-
-**Đề HCMUS yêu cầu nộp MỘT link GitHub repo public lên Moodle**, không nộp trực tiếp ZIP. Sau khi đọc hiểu mã nguồn, hoàn thiện thực nghiệm và cập nhật báo cáo:
+ k
+**Đề HCMUS yêu cầu nộp MỘT link GitHub repo public lên Moodle** .Sau khi đọc hiểu mã nguồn, hoàn thiện thực nghiệm và cập nhật báo cáo:
 
 ```powershell
 git init
