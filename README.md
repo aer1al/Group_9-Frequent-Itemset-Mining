@@ -22,7 +22,7 @@ Bảng dưới đây thể hiện phân công phụ trách từ thời điểm t
 
 - Đề: <https://hcmus-cs-ta.github.io/lab-book/data-mining/projects/itemset/>
 - **Chọn duy nhất Eclat** (không phải dEclat), có 2 backend `set` và `bitset`, tự triển khai từ mô tả Zaki (2000), không sao chép SPMF hoặc GitHub.
-- **Python từ 3.9** (khuyến nghị 3.11), chỉ dùng NumPy cho xử lý ảnh; `pytest` phục vụ kiểm thử. Không dùng sklearn, mlxtend, efficient-apriori, các thư viện FIM.
+- **Python từ 3.9** (khuyến nghị 3.13), chỉ dùng NumPy cho xử lý ảnh; `pytest` phục vụ kiểm thử. Không dùng sklearn, mlxtend, efficient-apriori, các thư viện FIM.
 - **Julia:** cài đặt Eclat riêng trong `julia/EclatJulia.jl`, gồm backend `Set` và `BitVector`, có CLI, kiểm thử và benchmark. Đã thử Julia 1.13.3 trên Windows; notebook Colab ghi Julia 1.12.6.
 - **Chương 1:** Đọc/ghi định dạng SPMF, giao diện dòng lệnh, cài đặt Eclat, kiểm thử trên cơ sở dữ liệu nhỏ và tối ưu bằng bitset.
 - **Chương 2:** Bốn bộ benchmark (Foodmart, c20d10k, t25i10d10k, BMS_WebView_1); sáu ngưỡng minsup mỗi bộ được xác định từ support singleton trong dữ liệu. Đo thời gian, bộ nhớ Python và RSS tiến trình, kích thước đầu ra, đối chiếu SPMF, scalability và ảnh hưởng của độ dài giao dịch.
