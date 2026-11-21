@@ -156,7 +156,7 @@ git remote add origin <URL_REPOSITORY_CUA_BAN>
 git push -u origin main
 ```
 
-**Liêm chính học thuật:** công cụ AI đã hỗ trợ một phần việc chuẩn bị mã và tài liệu. Sinh viên cần tự rà soát, hiểu, kiểm chứng và khai báo theo quy định học phần. Không trình bày công việc chưa thực hiện hoặc kết quả tham chiếu SPMF như sản phẩm do cài đặt của dự án tạo ra.
+**Liêm chính học thuật:** công cụ AI đã hỗ trợ một phần việc chuẩn bị mã và tài liệu. Không trình bày công việc chưa thực hiện hoặc kết quả tham chiếu SPMF như sản phẩm do cài đặt của dự án tạo ra.
 
 ## 9. Chạy notebook trên Google Colab
 1. Mở [Google Colab](https://colab.research.google.com/), đăng nhập và chọn *File → Upload notebook*.
