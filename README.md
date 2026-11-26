@@ -1,13 +1,11 @@
-**Thành viên:** Thiều Quang - 24127114
-
-**Thành viên:** Tôn Thất Việt Khoa — 24127190  
+**Thành viên 1:** Thiều Quang — 24127114  
+**Thành viên 2:** Tôn Thất Việt Khoa — 24127190  
 **Môn học:** Khai thác dữ liệu và ứng dụng (*Data Mining and Applications*)  
-**Đồ án 1 :** [HCMUS — Khai thác tập mục phổ biến](https://hcmus-cs-ta.github.io/lab-book/data-mining/projects/itemset/)
-
+**Đồ án 1:** [HCMUS — Khai thác tập mục phổ biến](https://hcmus-cs-ta.github.io/lab-book/data-mining/projects/itemset/)
 
 # Đồ án Frequent Itemset Mining — Eclat (Python + Julia, VS Code + Colab)
 
-Đây là dự án cài đặt thuật toán Eclat độc lập bằng Python (set/bitset) và Julia (Set/BitVector), kèm hai ứng dụng thực tế. Trên Windows, Python đạt 41/41 ca kiểm thử, Julia đạt 77/77; mỗi bản có 48 lượt benchmark thành công. Đối chiếu itemset–support với SPMF đạt 24/24 cấu hình benchmark; trên Colab, Python đạt 25/25 khi tính cả toy. Có 10 luật kết hợp market basket, 37 mẫu visual words, kết quả scalability/bộ nhớ và báo cáo IEEE 14 trang tổng cộng, đáp ứng giới hạn 10–15 trang nội dung theo đề bài. Các phép đo của Python, Julia và SPMF có giao thức và chi phí khởi động khác nhau, không được diễn giải như so sánh tốc độ thuần túy.
+Đây là dự án cài đặt thuật toán Eclat độc lập bằng Python (set/bitset) và Julia (Set/BitVector), kèm hai ứng dụng thực tế. Trên Windows, Python đạt 41/41 ca kiểm thử pytest, Julia đạt 77/77 ca kiểm thử; mỗi bản có 48 lượt benchmark thành công. Đối chiếu itemset–support với SPMF đạt 24/24 cấu hình benchmark; trên Colab, Python đạt 25/25 khi tính cả bộ toy. Có 10 luật kết hợp market basket, 37 mẫu visual words, kết quả scalability/bộ nhớ và báo cáo IEEE 13 trang tổng cộng, đáp ứng giới hạn 10–15 trang nội dung theo đề bài. Các phép đo của Python, Julia và SPMF có giao thức và chi phí khởi động khác nhau, không được diễn giải như so sánh tốc độ thuần túy.
 
 ## Phân công công việc
 
@@ -29,12 +27,22 @@ Bảng dưới đây thể hiện phân công phụ trách từ thời điểm t
 - **Chương 3:** ECommerce (market basket và top-10 luật theo lift); UCI Optdigits (patch descriptors, codebook k-means NumPy, Bag of Visual Words → Eclat).
 - **Đường dẫn tài liệu/bộ dữ liệu gốc:** [DATA_SOURCES.md](DATA_SOURCES.md). Script tải dữ liệu ghi SHA256 / URL vào `data/download_manifest.json`.
 - **GitHub công khai:** https://github.com/aer1al/Group_9-Frequent-Itemset-Mining
-- **Google Colab:** [Notebook Eclat](https://colab.research.google.com/drive/1zk6pnHh-6Xea7r3L5pFuSz2ZveCDUJTf?usp=sharing). Notebook nguồn: `notebooks/Project2.ipynb` (26 cells; 15 ô code đã lưu kết quả). Tác giả xác nhận notebook đã chạy sạch từ đầu đến cuối. Quyền truy cập công khai chưa được xác minh bằng lượt kiểm tra ẩn danh; trước khi nộp, đặt General access thành “Anyone with the link — Viewer” và thử mở bằng cửa sổ đăng xuất.
+- **Google Colab:** [Notebook Eclat](https://colab.research.google.com/drive/1xR55MV6zfvXb2ndDHFHR2JBN6KHJvRmf?usp=sharing).
+
+## Các notebook trong repo
+
+| File | Vị trí | Dùng để |
+| --- | --- | --- |
+| `Eclat_Experiments.ipynb` | thư mục gốc | Chạy trên **Google Colab** (upload ZIP mã nguồn, cuối cùng xuất ZIP kết quả). 26 cells, 15 ô code đã lưu kết quả, không có output lỗi. |
+| `notebooks/Project2.ipynb` | `notebooks/` | Bản đồng bộ từ Colab, **nội dung giống hệt** `Eclat_Experiments.ipynb` (chỉ khác tên file). |
+| `Eclat_Local_VSCode.ipynb` | thư mục gốc | Chạy **local trong VS Code** bằng Python kernel đã cài; tự tìm thư mục dự án, không gọi Colab, không tạo ZIP. Bước 7B (Julia) cần `julia` có trên PATH; nếu chưa có, ô tìm Julia sẽ báo lỗi và các ô sau đó không chạy được. |
+
+Ngoài ra, `notebooks/README.md` là bản tóm tắt ngắn cho thư mục `notebooks/`.
 
 ## 1. Chạy bằng VS Code trên Windows
 
 1. Trên máy thực nghiệm, mở thư mục **`D:\Group_9`** bằng **VS Code > File > Open Folder** (trên máy khác, mở thư mục gốc đã giải nén; không mở riêng từng file `.py`).
-2. Cài Python, Julia và Java. **Bản `tools/spmf.jar` đang dùng yêu cầu Java 25**; kiểm tra bằng `java -version`. Có thể dùng VS Code Terminal PowerShell; notebook chạy trên Google Colab. Nếu muốn biên dịch `docs/Report.pdf`, dùng XeLaTeX (MiKTeX/TeX Live).
+2. Cài Python, Julia và Java. **Bản `tools/spmf.jar` đang dùng yêu cầu Java 25**; kiểm tra bằng `java -version`. Nếu muốn biên dịch `docs/Report.pdf`, dùng XeLaTeX (MiKTeX/TeX Live).
 3. Mở **Terminal > New Terminal** (PowerShell), chạy:
 
 ```powershell
@@ -46,11 +54,13 @@ py -3 -m venv .venv
 
 Bạn cũng có thể vào **Terminal > Run Task** chọn `01 | Install dependencies`, `02 | All tests`... trong `.vscode/tasks.json`, hoặc Run and Debug chọn `01 - Eclat toy bitset`.
 
+Có hai cách chạy local: dùng lệnh trong **Terminal PowerShell** như trên, hoặc mở `Eclat_Local_VSCode.ipynb` trong VS Code và chạy lần lượt từng ô. Cách nào cũng cần mở đúng thư mục gốc của project.
+
 > Terminal PowerShell: vào thư mục dự án bằng `cd "D:\Group_9"`. Nếu `py` không có, dùng `python -m venv .venv`; nếu `.venv` đã tồn tại, không cần tạo lại.
 
 ## 1B. Chạy Eclat Julia từ VS Code Terminal
 
-Chạy trong **PowerShell tại `D:\Group_9`** (không chạy notebook bằng Jupyter của VS Code):
+Chạy trong **PowerShell tại `D:\Group_9`**:
 
 ```powershell
 julia --version
@@ -110,7 +120,7 @@ SPMF chạy như một tiến trình Java độc lập với CLI `java -jar spmf
 - `results/market_top10.csv`: luật giỏ hàng `X->Y`, support, confidence, lift từ Eclat riêng. File đầu vào ECommerce có `item_1 ... item_n:timestamp`: parser bỏ timestamp, mỗi đơn hàng là một giao dịch. Mapping item ID → tên mặt hàng từ SPMF; luật không chứng minh quan hệ nhân quả.
 - `results/visual_patterns.csv`: từ UCI Optdigits (mỗi ảnh 8×8, 16 descriptors patch 2×2) tạo codebook bằng NumPy k-means với seed 2026, mỗi ảnh thành một tập từ trực quan. Eclat khai thác tần suất. Nhãn chữ số không dùng trong lúc tạo codebook hoặc mining. Cần diễn giải giới hạn mất thông tin không gian.
 
-## 6. Biểu đồ, báo cáo IEEE hai cột, Colab
+## 6. Biểu đồ, báo cáo IEEE hai cột
 
 ```powershell
 .\.venv\Scripts\python.exe -m scripts.plot_results
@@ -129,8 +139,6 @@ cd ..
 
 `docs/Report.pdf` là báo cáo IEEE đã cập nhật và biên dịch thành công (13 trang tổng cộng; tài liệu tham khảo bắt đầu ở trang cuối), có phần Python, Julia, SPMF, bảng kết quả và hai ứng dụng. Hướng dẫn biên dịch nằm trong `docs/REPORT_BUILD.md`. Nếu chỉnh LaTeX, cần biên dịch lại hai lượt và kiểm tra PDF cuối.
 
-Notebook `notebooks/Project2.ipynb` là bản đồng bộ từ Colab gồm 26 cells, đã chạy 15 cell code liên tục và không lưu output lỗi. Để chạy trên Colab, upload ZIP mã nguồn khi notebook yêu cầu; xem link Colab ở đầu README. Trên Windows, dùng VS Code Terminal để chạy các mô-đun Python/Julia.
-
 ## 7. Tái lập thực nghiệm khi cần
 
 Các kết quả thực nghiệm chính **đã được tạo**. Muốn kiểm tra nhanh mà không chạy lại benchmark, dùng:
@@ -143,9 +151,18 @@ julia --startup-file=no .\julia\test_eclat.jl
 
 Nếu cần tái tạo đầy đủ, dùng các lệnh benchmark, ứng dụng và `scripts.run_spmf_fixed` ở các mục trên. Công cụ SPMF chạy Java độc lập; thời gian SPMF có gồm khởi động JVM. Không kết luận hiệu năng giữa các ngôn ngữ nếu môi trường và cách đo chưa đồng nhất.
 
-## 8. Nộp Moodle qua GitHub (thực hiện từ VS Code)
- 
-**Đề HCMUS yêu cầu nộp MỘT link GitHub repo public lên Moodle** .Sau khi đọc hiểu mã nguồn, hoàn thiện thực nghiệm và cập nhật báo cáo:
+## 8. Chạy notebook trên Google Colab
+
+1. Mở [Google Colab](https://colab.research.google.com/), đăng nhập và chọn *File → Upload notebook*, hoặc mở trực tiếp [link Colab của nhóm](https://colab.research.google.com/drive/1xR55MV6zfvXb2ndDHFHR2JBN6KHJvRmf?usp=sharing).
+2. Nếu upload thủ công, chọn `Eclat_Experiments.ipynb` (ở thư mục gốc repo; `notebooks/Project2.ipynb` là bản giống hệt) và kết nối runtime Python.
+3. Chạy ô khởi tạo đầu tiên. Khi Colab hiện nút **Choose Files**, tải lên gói ZIP đầy đủ của dự án.
+4. Chạy các ô tiếp theo theo thứ tự. Kiểm tra thông báo lỗi và trạng thái của mỗi bước trước khi tiếp tục.
+5. Nếu tải SPMF tự động không thành công, lấy JAR từ [trang tải SPMF chính thức](https://www.philippe-fournier-viger.com/spmf/index.php?link=download.php) và dùng ô tải tệp dự phòng. Notebook có bước cấu hình Java 25 cho Colab.
+6. Chạy ô cuối để tạo gói kết quả `Eclat_Ket_Qua_Thuc_Nghiem_Colab.zip`. Tải gói về máy và lưu đúng cấu trúc thư mục trước khi cập nhật báo cáo.
+
+## 9. Nộp Moodle qua GitHub (thực hiện từ VS Code)
+
+**Đề HCMUS yêu cầu nộp MỘT link GitHub repo public lên Moodle.** Sau khi đọc hiểu mã nguồn, hoàn thiện thực nghiệm và cập nhật báo cáo:
 
 ```powershell
 git init
@@ -155,13 +172,3 @@ git commit -m "Implement Eclat and reproducible experiments"
 git remote add origin <URL_REPOSITORY_CUA_BAN>
 git push -u origin main
 ```
-
-**Liêm chính học thuật:** công cụ AI đã hỗ trợ một phần việc chuẩn bị mã và tài liệu. Không trình bày công việc chưa thực hiện hoặc kết quả tham chiếu SPMF như sản phẩm do cài đặt của dự án tạo ra.
-
-## 9. Chạy notebook trên Google Colab
-1. Mở [Google Colab](https://colab.research.google.com/), đăng nhập và chọn *File → Upload notebook*.
-2. Tải lên Eclat_Experiments.ipynb và kết nối runtime Python.
-3. Chạy ô khởi tạo đầu tiên. Nếu được yêu cầu chọn tệp, tải lên gói ZIP đầy đủ của dự án.
-4. Chạy các ô tiếp theo theo thứ tự. Kiểm tra thông báo lỗi và trạng thái của mỗi bước trước khi tiếp tục.
-5. Nếu tải SPMF tự động không thành công, lấy JAR từ [trang tải SPMF chính thức](https://www.philippe-fournier-viger.com/spmf/index.php?link=download.php) và dùng ô tải tệp dự phòng.
-6. Chạy ô cuối để tạo gói kết quả. Tải gói về máy và lưu đúng cấu trúc thư mục trước khi cập nhật báo cáo.
